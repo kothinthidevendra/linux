@@ -1,0 +1,49 @@
+Absolute Path --> From Begining 
+  /home/user/test
+Relative Path --> From current location
+  cd /home
+  cd user/test
+<command-name>  <options>  <inputs>
+pwd --> Present working directory
+whomai --> it shows which user 
+uname -a --> shows system info
+id --> shows complete user info
+touch --> creates empty file
+ls -l --> lists the files in long format
+ls -al --> list all files including hidden
+ls -lr --> list files in reverse alphabitical order
+ls -lt --> list files in lenghty format, latest at top
+ls -ltr --> list files in lenghty format, latest at bottom
+cat --> To read file
+cat > test --> To write a file
+cat >> test --> It will append the content in the file
+cp --> To copy
+mv --> To move or rename 
+cp -r --> copy recursively 
+cd .. --> One step back
+wget --> web get the content from web site(Download)
+curl --> shows the content on th screen 
+grep --> to search content in file
+grep <word-name> <file-name>
+Pipe | --> output of 1st command will be input to 2nd command
+cat <file-name> | grep <word-name>
+grep -i --> To ignore case sensitive in search
+grep -i error system.log
+grep -in error system.log --> search the error word and shows along with line numbers
+grep -inc error system.log --> search the error word and shows the count of the word
+head --> shows top 10 lines
+head -n 20 --> shows 20 lines
+tail --> shows last 10 lines
+tail -n 30 --> shows last 30 lines
+head -n 13 test.txt | tail -n 8 --> shows 8-13 lines
+rm --> to delete
+rm -r --> delete recursively 
+cut --> To cut and disaply the required content
+cut -d ":" -f1 /etc/passwd --> shows 1st fagment in file with delimter ":"
+cut -d ":" -f1,3 /etc/passwd --> shows 1st and 3rd fagment
+awk -F ":" '{print $1F}' /etc/passwd
+awk -F ":" 'print $1,$3F}' /etc/passwd
+0-999 --> system users
+1000 > --> Manual users
+awk -F ":' '$3>999 {print $1,$3F}' /etc/passwd --> list the user id's who has greater than 999 id
+  
