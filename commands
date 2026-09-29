@@ -46,4 +46,39 @@ awk -F ":" 'print $1,$3F}' /etc/passwd
 0-999 --> system users
 1000 > --> Manual users
 awk -F ":' '$3>999 {print $1,$3F}' /etc/passwd --> list the user id's who has greater than 999 id
-  
+==========
+VIM Editor
+===========
+Esc mode
+colon mode
+insert mode
+
+colon mode
+==========
+:q --> Quit
+:wq --> write and quit
+:q! --> quit forcely
+:set nu --> set line numbers
+:set nonu --> remove line number
+:20 --> it will take to line number 20
+:/<word-to-search> --> It will search for the word in forward search
+:?<word-to-search> --> back word search (bottom to top)
+:noh --> do not hightlight the word
+:2d --> it will delete line 2
+:5,10d --> it will delete lines from 5 to 10
+:%d --> delete entire content in the file
+:3s/<word-to-search>/<word-to-substitute> 
+:3s/sbin/SBIN --> it will find the sbin word in 3rd line and replace it with SBIN. By default it will replace only first occurence
+:3s/sbin/SBIN/g --> it will find the sbin word in 3rd line and replace it with SBIN at all occurence
+:%/sbin/SBIN/g --> it will replace with SBIN in entire file
+
+Esc Mode
+========
+gg --> takes to first line of file
+shift+g --> takes to bottom line of the file
+u --> undo
+ctrl+r --> redo
+yy --> copy the current line
+p --> paste the copied line
+dd --> it will cut/delete the current line
+
